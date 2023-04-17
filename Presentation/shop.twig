@@ -1,0 +1,24 @@
+{% include 'header.php' %}
+<form action="" method="POST">
+	<h4>Kies een afhaaldatum:</h4>
+	<input type="date" name="datumPicker" id="" min="{{datumMin}}" max="{{datumMax}}" value="{{afhaalDatum}}" required>
+	<span class="error">{{error}}</span>
+	<br>
+	<br>
+	<span class="error">{{errorKeuze}}</span>
+	<nav class="producten">
+		{% for product in producten %}
+			<div class="product">
+				<img src="{{product.imgUrl}}" alt="N/A">
+				<p>{{product.naam}}
+					(€{{product.prijsPerEenheid}})
+				</p>
+				<label for="aantal">Aantal:</label>
+				<input type="number" name="{{product.id}}" id="" value="{{winkelmand[product.id]}}">
+			</div>
+		{% endfor %}
+	</nav>
+	<section>
+		<input type="submit" value="Bestelling plaatsen" name="btnBestellen">
+	</section>
+</form></body></html>

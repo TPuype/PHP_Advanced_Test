@@ -1,0 +1,31 @@
+{% include 'header.php' %}
+<h2>Mijn bestellingen</h2>
+<br>
+<span class="error">{{errorAnnulatie}}</span>
+<table class="overzicht">
+	<thead>
+		<th>
+			Bestellingsnummer
+		</th>
+		<th>
+			Datum van bestelling
+		</th>
+		<th>
+			Afhaaldatum
+		</th>
+		<th>
+			Annuleren
+		</th>
+	</thead>
+	<tbody>
+		{% for bestelling in bestellingen %}
+			<tr>
+				<td>{{bestelling.id}}</td>
+				<td>{{bestelling.bestelDatum}}</td>
+				<td>{{bestelling.Afhaaldatum}}</td>
+                <td><a href="overzicht.php?action=delete&keuze={{bestelling.id}}">x</a></td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</tbody></table><form action="" method="POST">
+<input type="submit" value="Afrekenen" name="btnAfrekenen"></form></body></html>

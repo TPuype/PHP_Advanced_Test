@@ -1,0 +1,52 @@
+{% include 'header.php' %}
+<section>
+	<h1>Registreren</h1>
+	<form action="" method="POST">
+		<label for="txtNaam">Naam:</label>
+		<input type="text" name="txtNaam" value="{{naam}}">
+		<span class="error">{{errorNaam}}</span>
+		<br>
+		
+        <label for="txtVoornaam">Voornaam:</label>
+		<input type="text" name="txtVoornaam" value="{{voornaam}}">
+		<span class="error">{{errorVoornaam}}</span
+		><br>
+		
+        <label for="txtEmail">Email:</label>
+		<input type="email" name="txtEmail" value="{{email}}">
+		<span class="error">{{errorEmail}}</span>
+		<br>
+		
+        <label for="txtStraatnaam">Straatnaam:</label>
+		<input type="text" name="txtStraatNaam" value="{{straat}}">
+		<span class="error">{{errorStraatnaam}}</span>
+		<br>
+		
+        <label for="txtHuisnummer">Huisnummer:</label>
+		<input type="text" name="txtHuisnummer" value="{{huisnummer}}">
+		<span class="error">{{errorHuisnummer}}</span>
+		<br>
+		
+        <label for="txtPostcode">Postcode:</label>
+		<input type="text" name="txtPostcode" value="{{postcode}}">
+        <input type="submit" value="Zoeken" name="btnZoekPostcode">
+		<span class="error">{{errorPostcode}}</span>
+		<br>
+		
+
+        <span>Woonplaats:</span>
+		<select name="selectWoonplaats" id="">
+		<option value="">Geef een postcode in</option>
+		{% for keuzePlaats in plaatsenByPostcode %}
+			<option value="{{keuzePlaats.id}}">{{keuzePlaats.naam}}</option>
+		{% endfor %}
+		</select>
+		<span class="error">{{errorWoonplaats}}</span>
+		<br>
+
+        <input type="submit" value="Registreren" name="btnRegistreer">
+	</form>
+	{% if error is defined %}
+		<span class="error">{{error}}</span>
+	{% endif %}
+</section></body></html>

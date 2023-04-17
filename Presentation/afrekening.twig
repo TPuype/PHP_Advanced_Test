@@ -1,0 +1,36 @@
+{% include 'header.php' %}
+<h2>Afrekening</h2>
+<br>
+<span>Afhaaldatum: {{bestelling.afhaaldatum}}</span>
+<table class="overzicht">
+	<thead>
+		<th>
+			Product
+		</th>
+		<th>
+			Aantal
+		</th>
+		<th>
+			Prijs
+		</th>
+	</thead>
+	<tbody>
+		{% for bestelLijn in bestelLijnen %}
+			<tr>
+				<td>{{productService.naamById(bestelLijn)}}</td>
+				<td>{{bestelLijn.aantal}}</td>
+				<td>€{{bestelLijn.prijsPerEenheid * bestelLijn.aantal}}
+				</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+	<tfoot>
+		<tr>
+			<td style="color: red;">Totaal:</td>
+			<td></td>
+			<td style="color: red;">€{{totaal}}</td>
+		</tr>
+	</tfoot>
+</tbody></table><form action="" method="POST">
+<a href="shop.php" class="terug">Terug</a>
+<input type="submit" value="Afrekenen" name="btnAfrekenen"></form></body></html>

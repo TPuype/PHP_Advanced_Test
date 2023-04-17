@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 65vw;
+    margin: 0 auto;
+    font-family: arial, sans-serif;
+    color: #3B5249;
+    font-family: 'Sora', sans-serif;
+    padding-bottom: 5%;
+}
+
+h2 {
+    color: #231651;
+    margin-top: 5%;
+}
+
+input[type=submit] {
+    background-color: #F79F79;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.2s;
+    margin: 2% 0;
+}
+
+.terug, .admin{
+    display: inline-block;
+    background-color: #231651;
+    color: white;
+    font-size: 10px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.2s;
+    width: 8%;
+    height: 2%;
+    margin-top: 2%;
+}
+
+input[type=submit]:hover,
+.terug:hover, .admin:hover{
+    transition: 0.2s;
+    background-color: #E3F09B;
+    color: #5B5941;
+}
+
+input[type=text], input[type=email], input[type=password]{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.producten {
+    display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2%;
+    grid-gap: 60px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5% 0 0 0;
+    margin-bottom: 3%;
+}
+
+.product{
+    object-fit: contain;
+    height: 100%;
+}
+
+.product img {
+    width: 186px;
+    height: 186px;
+    max-height: 100%;
+    margin-top: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product p {
+    display: inline-block;
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.overzicht {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.overzicht td,
+.overzicht th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.overzicht tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.overzicht tr:hover {
+    background-color: #ddd;
+}
+
+.overzicht th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #F79F79;
+    color: white;
+}
+
+.error{
+    color: red;
+    margin: 1% 1%;
+
+}
+
+h1{
+    margin: 2% 0;
+}
+
+section{
+    margin: 3% 0;
+}
+
+nav{padding-bottom: 5%;}
